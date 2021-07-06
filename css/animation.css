@@ -1,3 +1,4 @@
+/* landing logo animation */
 @keyframes logo {
   0% {
     transform: translateY(-70px);
@@ -8,9 +9,22 @@
     opacity: 1;
   }
 }
+/* landing text animation */
 @keyframes txt {
   0% {
     width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* mobile menu animation */
+@keyframes icon-ani {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0%;
   }
   100% {
     width: 100%;

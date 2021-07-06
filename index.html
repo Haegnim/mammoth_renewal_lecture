@@ -24,12 +24,17 @@
       rel="stylesheet"
     />
     <title id="text"></title>
+    <!-- full page plugin link -->
+    <link rel="stylesheet" href="/mammoth/fullpage_lib/jquery.fullpage.css" />
+
     <!-- Reset CSS Link  -->
     <link rel="stylesheet" href="/mammoth/css/reset.css" />
     <!-- animetion CSS Link  -->
     <link rel="stylesheet" href="/mammoth/css/animation.css" />
     <!-- Main CSS Link  -->
     <link rel="stylesheet" href="/mammoth/css/style.css" />
+    <!-- media query css link -->
+    <link rel="stylesheet" href="/mammoth/css/media.css" />
 
     <script>
       //글자가 순서대로 타이핑 되는 애니메이션
@@ -49,10 +54,96 @@
     </script>
   </head>
   <body>
-    <div class="wrap">
+    <div class="wrap" id="fullpage">
+      <div class="overlay"></div>
       <!-- PC Frame Header and Navigation -->
-      <header class="header" id="header">
+      <header class="header active" id="header">
         <div class="center">
+          <!-- mobile menu icon -->
+          <div class="menu_icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- mobile navigation  -->
+          <nav class="mobile_nav">
+            <ul class="mobile_inner">
+              <li class="mobile_li">
+                <div class="mobile_logo_box">
+                  <a href="#" class="mobile_logo"></a>
+                </div>
+                <div class="close_btn">
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li class="mobile_li">
+                <a href="#" class="mobile_tit">ABOUT US</a>
+                <ul class="mobile_sub_nav">
+                  <li class="mobile_sub_li"><a href="#">매머드 커피</a></li>
+                  <li class="mobile_sub_li">
+                    <a href="#">매머드 익스프레스</a>
+                  </li>
+                  <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                  <li class="mobile_sub_li"><a href="#">오시는 길</a></li>
+                </ul>
+              </li>
+              <li class="mobile_li">
+                <a href="#" class="mobile_tit">MENU - 매머드커피</a>
+                <ul class="mobile_sub_nav">
+                  <li class="mobile_sub_li"><a href="#">전체메뉴</a></li>
+                  <li class="mobile_sub_li">
+                    <a href="#">신제품</a>
+                  </li>
+                  <li class="mobile_sub_li"><a href="#">32oz</a></li>
+                  <li class="mobile_sub_li"><a href="#">논커피</a></li>
+                  <li class="mobile_sub_li"><a href="#">스무디</a></li>
+                  <li class="mobile_sub_li"><a href="#">프라페/쉐이크</a></li>
+                </ul>
+              </li>
+              <li class="mobile_li">
+                <a href="#" class="mobile_tit">MENU - 매머드 익스프레스</a>
+                <ul class="mobile_sub_nav">
+                  <li class="mobile_sub_li"><a href="#">전체메뉴</a></li>
+                  <li class="mobile_sub_li">
+                    <a href="#">신제품</a>
+                  </li>
+                  <li class="mobile_sub_li"><a href="#">32oz</a></li>
+                  <li class="mobile_sub_li"><a href="#">논커피</a></li>
+                  <li class="mobile_sub_li"><a href="#">스무디</a></li>
+                  <li class="mobile_sub_li"><a href="#">프라페/쉐이크</a></li>
+                </ul>
+              </li>
+              <li class="mobile_li">
+                <a href="#" class="mobile_tit">STORE</a>
+                <ul class="mobile_sub_nav">
+                  <li class="mobile_sub_li"><a href="#">전체메뉴</a></li>
+                  <li class="mobile_sub_li">
+                    <a href="#">신제품</a>
+                  </li>
+                  <li class="mobile_sub_li"><a href="#">32oz</a></li>
+                  <li class="mobile_sub_li"><a href="#">논커피</a></li>
+                  <li class="mobile_sub_li"><a href="#">스무디</a></li>
+                  <li class="mobile_sub_li"><a href="#">프라페/쉐이크</a></li>
+                </ul>
+              </li>
+              <li class="mobile_li">
+                <a href="#" class="mobile_tit">MENU - 매머드커피</a>
+                <ul class="mobile_sub_nav">
+                  <li class="mobile_sub_li"><a href="#">전체메뉴</a></li>
+                  <li class="mobile_sub_li">
+                    <a href="#">신제품</a>
+                  </li>
+                  <li class="mobile_sub_li"><a href="#">32oz</a></li>
+                  <li class="mobile_sub_li"><a href="#">논커피</a></li>
+                  <li class="mobile_sub_li"><a href="#">스무디</a></li>
+                  <li class="mobile_sub_li"><a href="#">프라페/쉐이크</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- pc navigation -->
           <div class="logo">
             <a href="#" class="logo_link"></a>
           </div>
@@ -128,9 +219,10 @@
             </div>
           </div>
         </div>
+        <!-- end of center tag  -->
       </header>
       <!-- page 1 section -->
-      <section class="page_1 section">
+      <section class="page_1 section" data-anchor="1st">
         <div class="main_msg">
           <div class="logo_box">
             <img src="/mammoth/img/page01_logo.png" alt="" />
@@ -144,9 +236,23 @@
           </div>
         </div>
       </section>
+      <section
+        class="page_2 section"
+        data-anchor="2nd"
+        style="background: red"
+      ></section>
+      <section
+        class="page_3 section"
+        data-anchor="3rd"
+        style="background: blue"
+      ></section>
     </div>
     <!-- jquery framework load -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- full page plugin load -->
+    <script src="/mammoth/fullpage_lib/jquery.fullpage.js"></script>
+    <script src="/mammoth/js/fullpage_code.js"></script>
+    <!-- main jquery file load -->
     <script src="/mammoth/js/jq.main.js"></script>
   </body>
 </html>
