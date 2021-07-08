@@ -18,6 +18,8 @@
     width: 100%;
   }
 }
+
+/* page 2 middle logo animation */
 @keyframes txt_up {
   0% {
     transform: translateY(70px);
